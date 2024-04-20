@@ -1,0 +1,363 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 10px; /* Added padding to the body */
+}
+
+header, footer, .big-container {
+    background-color: white;
+    box-shadow: 0 2.5px 7.5px rgba(0, 0, 0, 0.10), 0 -2.5px 7.5px rgba(0, 0, 0, 0.10); /* Added top and bottom shadow */
+    text-align: center;
+    border-radius: 15px; /* Changed border radius to 15px */
+    padding: 15px 0 17px; /* Increased bottom padding by 2px */
+    margin: 10px; /* Added margin to header, footer, and big-container */
+}
+
+#logo {
+    font-family: 'Cookie', cursive;
+    font-size: 36px;
+    margin: 0;
+}
+
+.button-container {
+    margin-top: 10px; /* Added margin top */
+    display: flex; /* Added flex display */
+    justify-content: center; /* Center align buttons */
+}
+
+.button-container a {
+    color: black; /* Button text color */
+    border: 0.5px solid black; /* Button border */
+    border-radius: 8px; /* Button border radius */
+    padding: 10px 20px;
+    margin: 0 5px; /* Added margin */
+    text-decoration: none; /* Remove underline from links */
+}
+
+footer {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 4px; /* Footer margin bottom */
+    /* position: sticky; */
+    bottom: 0;
+}
+
+.big-container {
+    height: 60vh; /* Set height to 60% of viewport height */
+}
+.big-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.transaction-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.transaction-input {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.income-btn,
+.expense-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.income-btn {
+    background-color: green;
+    color: white;
+}
+
+.expense-btn {
+    background-color: red;
+    color: white;
+}
+
+.transaction-table {
+    width: 60%; /* Reduced width by 20% */
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.transaction-table th,
+.transaction-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.transaction-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.transaction-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Existing CSS styles */
+
+.budget-summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.summary-item {
+    padding: 10px;
+    margin: 10px;
+    border: 0.2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.summary-item p {
+    margin: 0;
+}
+
+.summary-item span {
+    font-weight: bold;
+}
+/* Existing CSS styles */
+
+.budget-summary {
+    display: flex;
+    flex-direction: column; /* Adjusted to column layout */
+    align-items: center; /* Center align items horizontally */
+    margin-top: 20px;
+}
+
+.summary-item {
+    padding: 10px;
+    margin: 10px;
+    border: 0.2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px; /* Set a fixed width for consistency */
+}
+
+.summary-item p {
+    margin: 0;
+}
+
+.summary-item span {
+    font-weight: bold;
+}
+/* Existing CSS styles */
+
+.graph-container {
+    padding: 10% 10%; /* Set 10% padding on top and bottom, and 10% padding on left and right */
+    border: 1px solid #ccc; /* Add border for visualization */
+    border-radius: 8px;
+    width: 80%; /* Set width to 80% */
+    height: 400px; /* Set a fixed height for the container */
+    margin: 20px auto; /* Center the container horizontally */
+}
+/* Existing CSS styles */
+
+.big-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Set height to 60% of viewport height */
+}
+
+#myChart {
+    width: 80%; /* Set width of the chart */
+    max-width: 800px; /* Limit maximum width of the chart */
+}
+/* Existing CSS styles */
+
+.big-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh; /* Set height to 60% of viewport height */
+}
+
+.account-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-item {
+    margin: 10px;
+}
+
+.info-item p {
+    margin: 0;
+}
+
+.info-item span {
+    font-weight: bold;
+}
+/* Existing CSS styles */
+
+header .button-container a {
+    border: none; /* Remove border from buttons inside header */
+}
+
+/* Additional CSS styles */
+/* Existing styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* New styles */
+/* Existing styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.big-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.container-1, .container-2 {
+    max-width: 800px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container-1 form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.container-1 form input[type="number"],
+.container-1 form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.container-1 form button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container-1 form button:hover {
+    background-color: #45a049;
+}
+
+.container-2 {
+    margin-top: 20px; /* Added margin top */
+    overflow-x: auto; /* Added horizontal overflow */
+}
+
+.expense-table-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#expense-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#expense-table th {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: left;
+}
+
+#expense-table td {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#expense-list .delete-btn {
+    color: red;
+    cursor: pointer;
+}
+
+.footer {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 4px;
+    position: sticky;
+    bottom: 0;
+}
+/* styles.css */
+
+/* Center the chart container vertically and horizontally */
+#chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%; /* Adjust as needed */
+}
+
+/* Set the size of the chart container */
+#myChart {
+    width: 90%; /* 10% less than the container */
+    height: 90%; /* Adjust as needed */
+}
+
+/* styles.css */
+
+/* Style for buttons */
+.btn {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px; /* Add some margin between buttons */
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* Style for disabled button */
+.btn:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+.footer {
+    color: #555;
+    font-size: 14px;
+    margin-top: auto; /* Move footer to the bottom */
+}

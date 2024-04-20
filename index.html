@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix Money - Transaction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="logo">Felix Money</h1>
+        <div class="button-container">
+            <a href="index.html" class="btn_Transaction">Transaction</a>
+            <a href="budget.html" class="btn_Budget">Budget</a>
+            <a href="insights.html" class="btn_Insights">Insights</a>
+            <a href="account.html" class="btn_Account">Account</a>
+        </div>
+    </header>
+
+    <div id="transaction-section">
+        <div class="big-container">
+            <div class="container-1">
+                <form id="transaction-form">
+                    <input type="text" id="transaction-name" placeholder="Transaction Name" required />
+                    <input type="number" id="transaction-amount" placeholder="Amount" required />
+                    <button type="button" id="income-btn">Income</button>
+                    <button type="button" id="expense-btn">Expense</button>
+                </form>
+            </div>
+    
+            <div class="container-2">
+                <div class="expense-table-container">
+                    <table id="expense-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction Name</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="expense-list"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="budget-section">
+        <div class="big-container">
+            <div class="container">
+                <h2>Budget Summary</h2>
+                <div>Total Income: <span id="total-income">0</span></div>
+                <div>Total Expense: <span id="total-expense">0</span></div>
+                <div>Available Balance: <span id="available-balance">0</span></div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="insights-section">
+        <div class="big-container">
+            <div id="chart-container">
+                <canvas id="myChart"></canvas>
+                <canvas id="incomeExpenseChart" width="400px" height="200px"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <div id="account-section">
+        <div class="big-container">
+            <div class="account-info">
+                <div class="info-item">
+                    <p>Full Name: <span id="full-name">hidden</span></p>
+                </div>
+                <div class="info-item">
+                    <p>Customer ID: <span id="cust-id">hidden</span></p>
+                </div>
+                <div class="info-item">
+                    <p>Bank Account Number: <span id="bank-account">hidden</span></p>
+                </div>
+                <div class="info-item">
+                    <p>Password: <span id="password">********</span></p>
+                </div>
+                <div class="info-item">
+                    <p>UPI ID: <span id="upi-id">hidden</span></p>
+                </div>
+                <div class="button-container">
+                    <button id="view-details-btn" class="btn">View Details</button>
+                    <button id="modify-details-btn" class="btn" disabled>Modify Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <footer>
+        <p>&copy; All rights reserved. Created by Vikas Moond</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart.js"></script>
+
+</body>
+</html>
+
+
+
