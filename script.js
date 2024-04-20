@@ -120,37 +120,72 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// scroll 
+// chart
+
+
+
+
+// account 
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Get button elements
-    const transactionButton = document.querySelector(".btn_Transaction");
-    const budgetButton = document.querySelector(".btn_Budget");
-    const insightsButton = document.querySelector(".btn_Insights");
-    const accountButton = document.querySelector(".btn_Account");
+    const fullNameSpan = document.getElementById("full-name");
+    const custIdSpan = document.getElementById("cust-id");
+    const bankAccountSpan = document.getElementById("bank-account");
+    const passwordSpan = document.getElementById("password");
+    const upiIdSpan = document.getElementById("upi-id");
 
-    // Function to scroll to a section
-    function scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: "smooth" });
-        }
+    const viewDetailsBtn = document.getElementById("view-details-btn");
+    const modifyDetailsBtn = document.getElementById("modify-details-btn");
+
+    // Check if data is available
+    function isDataAvailable() {
+        return fullNameSpan.textContent !== "hidden" ||
+            custIdSpan.textContent !== "hidden" ||
+            bankAccountSpan.textContent !== "hidden" ||
+            upiIdSpan.textContent !== "hidden";
     }
 
-    // Event listeners for button clicks
-    transactionButton.addEventListener("click", function() {
-        scrollToSection("transaction-section");
+    // Function to show user data
+    function showUserData() {
+        viewDetailsBtn.disabled = true;
+        fullNameSpan.textContent = "John Doe"; // Example data, replace with actual data
+        custIdSpan.textContent = "123456789";
+        bankAccountSpan.textContent = "1234567890";
+        upiIdSpan.textContent = "john.doe@bank";
+        modifyDetailsBtn.disabled = false;
+    }
+
+    // Event listener for the "View Details" button
+    viewDetailsBtn.addEventListener("click", function() {
+        if (!isDataAvailable()) {
+            // Ask user to enter data
+            const fullName = prompt("Enter your full name:");
+            const custId = prompt("Enter your customer ID:");
+            const bankAccount = prompt("Enter your bank account number:");
+            const upiId = prompt("Enter your UPI ID:");
+
+            // Update displayed data if provided
+            if (fullName && custId && bankAccount && upiId) {
+                fullNameSpan.textContent = fullName;
+                custIdSpan.textContent = custId;
+                bankAccountSpan.textContent = bankAccount;
+                upiIdSpan.textContent = upiId;
+                modifyDetailsBtn.disabled = false;
+            } else {
+                alert("Please provide all details.");
+            }
+        }
     });
 
-    budgetButton.addEventListener("click", function() {
-        scrollToSection("budget-section");
-    });
-
-    insightsButton.addEventListener("click", function() {
-        scrollToSection("insights-section");
-    });
-
-    accountButton.addEventListener("click", function() {
-        scrollToSection("account-section");
+    // Event listener for the "Modify Details" button
+    modifyDetailsBtn.addEventListener("click", function() {
+        // Implement modification functionality here
+        alert("Contact Administrator.");
     });
 });
+
+
+
+// update 
+
+

@@ -62,6 +62,7 @@
         <div class="big-container">
             <div id="chart-container">
                 <canvas id="myChart"></canvas>
+                <canvas id="incomeExpenseChart" width="400px" height="200px"></canvas>
             </div>
         </div>
     </div>
@@ -70,23 +71,28 @@
         <div class="big-container">
             <div class="account-info">
                 <div class="info-item">
-                    <p>Full Name: <span id="full-name"></span></p>
+                    <p>Full Name: <span id="full-name">hidden</span></p>
                 </div>
                 <div class="info-item">
-                    <p>Customer ID: <span id="cust-id"></span></p>
+                    <p>Customer ID: <span id="cust-id">hidden</span></p>
                 </div>
                 <div class="info-item">
-                    <p>Bank Account Number: <span id="bank-account"></span></p>
+                    <p>Bank Account Number: <span id="bank-account">hidden</span></p>
                 </div>
                 <div class="info-item">
-                    <p>Password: <span id="password"></span></p>
+                    <p>Password: <span id="password">********</span></p>
                 </div>
                 <div class="info-item">
-                    <p>UPI ID: <span id="upi-id"></span></p>
+                    <p>UPI ID: <span id="upi-id">hidden</span></p>
+                </div>
+                <div class="button-container">
+                    <button id="view-details-btn" class="btn">View Details</button>
+                    <button id="modify-details-btn" class="btn" disabled>Modify Details</button>
                 </div>
             </div>
         </div>
     </div>
+    
     
 
     <footer>
@@ -94,6 +100,9 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="chart.js"></script>
+
 </body>
 </html>
 
